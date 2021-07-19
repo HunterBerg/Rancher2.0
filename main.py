@@ -11,8 +11,9 @@ from discord.utils import get
 from discord.ext import commands
 
 
-load_dotenv()
-token = os.environ['TOKEN'] 
+
+token = os.environ['TOKEN']
+
 
 Bot = commands.Bot(
 	command_prefix=commands.when_mentioned_or("*"),
@@ -44,3 +45,5 @@ async def lick(ctx): #tounge command (*lick)
 async def on_ready():
 	await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Music"))
 	print('Rancher is Online') #prints this in the consle when the bot is running 
+
+	Bot.run(token)
