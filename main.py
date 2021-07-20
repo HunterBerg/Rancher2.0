@@ -28,7 +28,7 @@ async def ping(ctx): #shows latency of bot in ms
 @Bot.command() #speak command (*speak)
 async def speak(ctx, *, text):
 	"""A command only Hunter can use. It allows him to speak through the bot."""
-	if ctx.message.author.id == 355099018113843200:
+	if ctx.message.author.id == 849757363790938132:
 		message = ctx.message 
 		await message.delete()
 
@@ -46,4 +46,4 @@ async def on_ready():
 	await Bot.change_presence(activity=discord.Activity(type=discord.ActivityType.listening, name="Music"))
 	print('Rancher is Online') #prints this in the consle when the bot is running 
 
-	Bot.run(token)
+Bot.run(token)
